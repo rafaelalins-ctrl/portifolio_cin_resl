@@ -1,9 +1,10 @@
 import React from 'react';
+import fotoPerfil from '../foto_perfil.jpg';
 
 export default function Header() {
   return (
     <header className="profile-header">
-      <img src="/foto_perfil.jpg" alt="Rafaela Lins" className="profile-img" />
+      <img src={fotoPerfil} alt="Rafaela Lins" className="profile-img" />
       <div className="profile-info">
         <h1>Rafaela Lins</h1>
         <p>Graduanda em Sistemas de Informação - CIn/UFPE</p>

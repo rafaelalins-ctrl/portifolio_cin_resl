@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
+import imagemCad from '../cinext.png'; 
+import imagemIp from '../pythons_trial.png';
 
 export default function Portfolio() {
   return (
@@ -16,7 +18,7 @@ export default function Portfolio() {
             <a href="https://cinext.lovable.app" className="link-repo">Ver Protótipo</a>
           </div>
           <div className="project-image">
-            <img src="/public/cinext.png" alt="Projeto CAD - CinExt" />
+            <img src={imagemCad} alt="Projeto CAD - CinExt" />
           </div>
         </div>
 
@@ -28,7 +30,7 @@ export default function Portfolio() {
             <a href="https://github.com/RogerioHenrique1403/IP_zelda" className="link-repo">Ver Repositório</a>
           </div>
           <div className="project-image">
-            <img src="/public/pythons_trial.png" alt="Projeto IP - The Python's Trial" />
+            <img src={imagemIp} alt="Projeto IP - The Python's Trial" />
           </div>
         </div>
       </main>
