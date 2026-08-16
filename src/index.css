@@ -1,0 +1,228 @@
+/* Importando as fontes do Google Fonts: Faustina (títulos) e Inter (textos) */
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f7f7; 
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 50px 80px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  min-height: 80vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Faustina', serif; 
+  color: #1a1a1a;
+}
+
+/* Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.profile-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Botões da Header */
+.contact-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #BE2121; /* Cor vermelha CIn */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #9a1b1b;
+}
+
+/* Navigation */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 50px;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.tabs a:hover {
+  color: #BE2121;
+}
+
+.tabs a.active {
+  color: #BE2121;
+  border-bottom: 3px solid #BE2121;
+  margin-bottom: -1px;
+}
+
+/* Sobre Mim */
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.content p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.content ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.content li {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.content li::before {
+  content: "•";
+  color: #BE2121;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+/* Portfólio */
+.project-card {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.class {
+  display: inline-block;
+  background-color: #fcebeb;
+  color: #BE2121;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.link-repo {
+  display: inline-block;
+  margin-top: 10px;
+  color: #BE2121;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.link-repo:hover {
+  border-bottom: 1px solid #BE2121;
+}
+
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+/* Responsividade*/
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    margin: 0;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .tabs {
+    gap: 30px;
+  }
+  
+  .project-card {
+    flex-direction: column;
+  }
+}
